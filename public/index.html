@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KanbanShelf</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Topbar -->
+<header class="topbar">
+    <div class="topbar-content">
+      <h1 >KanbanShelf</h1>
+    </div>
+  </header>
+
+
+  <!-- Kanban Board -->
+  <div id="kanbanBoard" class="board">
+
+    <!-- In Stock Column -->
+    <div class="column" data-category="In Stock">
+      <h3>In Stock</h3>
+      <button class="add-btn" data-category="In Stock">➕ Add</button>
+      <input type="text" class="search-input" placeholder="Search..." data-category="In Stock" />
+
+      <div class="column-body" id="in-stock">
+        <div draggable="true"class="card-in-stock">Haldiram Aloo Bhujia</div>
+      </div>
+      
+    </div>
+
+    <!-- Low Stock Column -->
+    <div class="column" data-category="Low Stock">
+      <h3>Low Stock</h3>
+      <button class="add-btn" data-category="Low Stock">➕ Add</button>
+      <input type="text" class="search-input" placeholder="Search..." data-category="In Stock" />
+
+      <div class="column-body" id="low-stock">
+        <div draggable="true"class="card-low-stock">Haldiram Khatta Meetha</div>
+      </div>
+      
+    </div>
+
+    <!-- Out of Stock Column -->
+    <div class="column" data-category="Out of Stock">
+      <h3>Out of Stock</h3>
+      <button class="add-btn" data-category="Out of Stock">➕ Add</button>
+      <input type="text" class="search-input" placeholder="Search..." data-category="In Stock" />
+
+      <div class="column-body" id="out-of-stock">
+        <div draggable="true" class="card-out-of-stock">Haldiram Plain Bhujia</div>
+      </div>
+      
+    </div>
+
+    <!-- To Purchase Column -->
+    <div class="column" data-category="To Purchase">
+      <h3>To Purchase</h3>
+      <button class="add-btn" data-category="To Purchase">➕ Add</button>
+      <input type="text" class="search-input" placeholder="Search..." data-category="In Stock" />
+
+
+      <div class="column-body" id="to-purchase">
+        <div draggable="true" class="card-purchase">Haldiram Chai Matthi</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup Form Modal (Initially Hidden) -->
+  <div id="popupFormContainer" class="popup-form hidden">
+    <form id="popupForm">
+      <h2>Add Product</h2>
+      <input type="text" id="popupName" placeholder="Product Name" required>
+      <input type="hidden" id="popupCategory">
+      <p>Adding to: <strong id="popupCategoryLabel"></strong></p>
+      <button type="submit">Add Product</button>
+      <button type="button" id="closePopup">Cancel</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

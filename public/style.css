@@ -1,0 +1,274 @@
+/* ==== Global Styles ==== */
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  /* ==== Topbar ==== */
+  .topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: #00727c;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .topbar-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .topbar h1 {
+    font-size: 20px;
+    color: #ffffff;
+    margin: 0;
+  }
+  
+  /* ==== Main Content Wrapper ==== */
+  .main-content {
+    padding-top: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  /* ==== Kanban Board ==== */
+  .board {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10vh;
+  }
+  
+  /* ==== Column ==== */
+  .column {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    flex: 1 1 220px;
+    max-width: 250px;
+    display: flex;
+    flex-direction:column;
+    padding: 10px;
+    min-height: 400px;
+    position: relative;
+  }
+  
+  .column h3 {
+    margin: 0 0 10px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+  }
+  
+  /* Column colors based on data-category */
+  .column[data-category="In Stock"] h3 { background-color: #4caf50; }       /* Green */
+  .column[data-category="Low Stock"] h3 { background-color: #ff9800; }      /* Orange */
+  .column[data-category="Out of Stock"] h3 { background-color: #f44336; }   /* Red */
+  .column[data-category="To Purchase"] h3 { background-color: #3f51b5; }    /* Blue */
+  
+  /* ==== Cards ==== */
+  .card-instock {
+    background-color: #4caf50;
+    
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    cursor: grab;
+    font-size: 14px;
+    transition: background-color 0.2s;
+    justify-content: center;
+    display: flex;
+    color: white;
+  }
+  
+  .card-instock:hover {
+    background-color: #f0f0f0;
+    color: black;
+  }
+
+  .card-outofstock {
+    background-color: #f44336;
+    
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    cursor: grab;
+    font-size: 14px;
+    transition: background-color 0.2s;
+    justify-content: center;
+    display: flex;
+    color: white;
+  }
+  
+  .card-outofstock:hover {
+    background-color: #f0f0f0;
+    color: black;
+  }
+
+  .card-lowstock {
+    background-color: #ff9800;
+    
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    cursor: grab;
+    font-size: 14px;
+    transition: background-color 0.2s;
+    justify-content: center;
+    display: flex;
+    color: white;
+  }
+  
+  .card-lowstock:hover {
+    background-color: #f0f0f0;
+    color: black;
+  }
+  
+  .card-purchase {
+    background-color: #3f51b5;
+    
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    cursor: grab;
+    font-size: 14px;
+    transition: background-color 0.2s;
+    justify-content: center;
+    display: flex;
+    color: white;
+  }
+  
+  .card-purchase:hover {
+    background-color: #f0f0f0;
+    color: black;
+  }
+  
+  /* ==== Add Button ==== */
+  .add-btn {
+    background-color: #eee;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    margin: 10px 0px 10px 0px ;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+  }
+  
+  .add-btn:hover {
+    background-color: #ddd;
+  }
+  
+/* search bar */
+  .search-input {
+    width: 100%;
+    padding: 6px 10px;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.2s ease;
+  }
+  
+  .search-input:focus {
+    border-color: #007bff;
+    background-color: #f9f9f9;
+  }
+  
+  /* ==== Popup Form Modal ==== */
+  .popup-form {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+  }
+  
+  .popup-form form {
+    background-color: #fff;
+    padding: 20px 25px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  
+  .popup-form input {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .popup-form button {
+    padding: 8px 12px;
+    margin-top: 10px;
+    margin-right: 5px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .popup-form button[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .popup-form button#closePopup {
+    background-color: #888;
+    color: white;
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+  .card {
+    position: relative;
+    padding-right: 24px; /* space for the delete button */
+  }
+  
+  .delete-btn {
+    position: absolute;
+    top: 4px;
+    right: 6px;
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    background: none;
+    border: none;
+  }
+  
+  .delete-btn:hover {
+    color: #ffffff;
+  }
+  
+  
