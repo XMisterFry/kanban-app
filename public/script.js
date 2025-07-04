@@ -1,5 +1,4 @@
 
-
 let Products = [
     {
         name: "MDH Lal Mirch",
@@ -9,9 +8,8 @@ let Products = [
         name: "MDH Dhaniya Powder",
         category: "Out of Stock"
     }
-]
+];
 
-let Products = require ('./db')
 
 function renderBoard() {
     
