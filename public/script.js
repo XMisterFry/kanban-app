@@ -7,6 +7,14 @@ let Products = [
     {
         name: "MDH Dhaniya Powder",
         category: "Out of Stock"
+    },
+     {
+      name : "Haldiram Aloo Bhujia",
+      category: "Low Stock"
+     },
+    {
+        name: "Haldiram Bhujia",
+        category: "To Purchase"
     }
 ];
 
