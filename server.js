@@ -54,7 +54,7 @@ res.status(201).json({
   });
 }
 catch (error) {
-    console.error("Detailed error:", error);  // Add this line
+    console.error("Detailed error:", error);  
     res.json({
         error: "Entry was not posted",
         details: error.message  // Include the actual error message
